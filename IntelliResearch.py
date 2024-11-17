@@ -1,3 +1,38 @@
+import os
+import fitz
+import time
+import torch
+import getpass
+import requests
+import mimetypes
+import pytesseract
+import numpy as np
+import pandas as pd
+from PIL import Image
+from langchain import hub
+from PyPDF2 import PdfReader
+from collections import deque
+import matplotlib.pyplot as plt
+from google.colab import drive
+from huggingface_hub import login
+from semantic_router import Route
+from google.colab import userdata
+import google.generativeai as genai
+from langchain.schema import Document
+from pdf2image import convert_from_path
+from langchain.vectorstores import Chroma
+from semantic_router.layer import RouteLayer
+from vertexai.generative_models import Part
+from langchain.prompts import PromptTemplate
+from semantic_router.encoders import CohereEncoder
+from sentence_transformers import SentenceTransformer
+from langchain_google_genai import GoogleGenerativeAI
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_core.output_parsers import StrOutputParser
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline 
+
 # Configure the Google API Key for genai
 def configure_genai(api_key_summary):
     api_key = api_key_summary
