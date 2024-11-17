@@ -12,4 +12,4 @@ transformers
 huggingface_hub
 semantic_router
 google-generativeai
-langchain--upgrade 
+
