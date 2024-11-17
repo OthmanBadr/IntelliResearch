@@ -1,6 +1,9 @@
 import streamlit as st
 import mimetypes
 
+# Assuming `genai` and the function `generate_collective_summary_and_questions` are properly imported and configured
+from your_module import generate_collective_summary_and_questions  # Replace 'your_module' with the actual module name
+
 # Set page configuration
 st.set_page_config(page_title="IntelliResearch", layout="wide")
 
@@ -92,10 +95,6 @@ uploaded_files = st.sidebar.file_uploader(
     type=["pdf"],
     accept_multiple_files=True
 )
-if uploaded_files:
-    st.sidebar.markdown("### Uploaded Files")
-    for file in uploaded_files:
-        st.sidebar.markdown(f"📄 {file.name}")
 
 # Main Section Header
 st.markdown(
@@ -108,11 +107,32 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Summary Section
-st.markdown("<div class='summary-box'><p class='summary-title'>Summary</p><p>Summaries of uploaded documents will appear here.</p></div>", unsafe_allow_html=True)
+# Check if files are uploaded
+if uploaded_files:
+    st.sidebar.markdown("### Uploaded Files")
+    for file in uploaded_files:
+        st.sidebar.markdown(f"📄 {file.name}")
+    
+    # Configure your API key (replace with your actual key)
+    api_key_summary = "YOUR_GOOGLE_API_KEY"
+    
+    # Process uploaded PDFs
+    with st.spinner("Generating summary and questions..."):
+        result = generate_collective_summary_and_questions([file for file in uploaded_files], api_key_summary)
+    
+    # Display Summary
+    st.markdown("<div class='summary-box'><p class='summary-title'>Summary</p>" + result['summary'] + "</div>", unsafe_allow_html=True)
 
-# Questions Section
-st.markdown("<div class='questions-box'><p class='questions-title'>Generated Questions</p><ul><li>What are the main points of the document?</li><li>Can you summarize the findings?</li><li>What is the purpose of the document?</li></ul></div>", unsafe_allow_html=True)
+    # Display Generated Questions
+    if result['questions']:
+        st.markdown("<div class='questions-box'><p class='questions-title'>Generated Questions</p><ul>" +
+                    "".join([f"<li>{q}</li>" for q in result['questions']]) +
+                    "</ul></div>", unsafe_allow_html=True)
+
+else:
+    # Default empty sections if no files are uploaded
+    st.markdown("<div class='summary-box'><p class='summary-title'>Summary</p><p>Summaries of uploaded documents will appear here.</p></div>", unsafe_allow_html=True)
+    st.markdown("<div class='questions-box'><p class='questions-title'>Generated Questions</p><ul><li>What are the main points of the document?</li><li>Can you summarize the findings?</li><li>What is the purpose of the document?</li></ul></div>", unsafe_allow_html=True)
 
 # Chat Section
 st.markdown("### Chat with IntelliResearch")
@@ -140,4 +160,3 @@ def handle_input():
 
 # Chat Input
 st.text_area("Enter your query:", key="input_text", on_change=handle_input, placeholder="Ask something about the uploaded files...")
-
