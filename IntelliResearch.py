@@ -1,3 +1,4 @@
+pip install -r requirements.txt
 import os
 import time
 import torch
