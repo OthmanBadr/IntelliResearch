@@ -1,5 +1,4 @@
 import os
-import fitz
 import time
 import torch
 import getpass
@@ -15,7 +14,7 @@ from collections import deque
 import matplotlib.pyplot as plt
 from google.colab import drive
 from huggingface_hub import login
-from semantic_router import Route
+from semantic_router import Routetz
 from google.colab import userdata
 import google.generativeai as genai
 from langchain.schema import Document
