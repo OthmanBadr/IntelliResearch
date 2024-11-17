@@ -1,0 +1,5 @@
+langchain langchain-google-genai "langchain[docarray]" faiss-cpu pypdf langchain-community
+google-generativeai
+pymupdf
+langchain_google_genai
+langchain_huggingface PyPDF2 pymupdf pdf2image pytesseract langchain_chroma langchain_google_genai
