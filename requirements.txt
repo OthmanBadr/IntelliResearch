@@ -1,0 +1,12 @@
+streamlit
+langchain
+langchain_community
+openai
+langchain-google-genai
+langchain-google
+google-cloud
+faiss-cpu
+pypdf
+pymupdf
+tiktoken
+sentence_transformers
