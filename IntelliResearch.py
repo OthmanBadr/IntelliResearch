@@ -255,7 +255,7 @@ if uploaded_files:
 
     # Generate summary and questions
     st.write("Processing uploaded files...")
-    api_key_summary = "your-google-api-key"  # Replace with your actual API key
+    api_key_summary = "AIzaSyBnUydStaEeHFdz0-Ek0yBZVJ2YZF9iq1c"  # Replace with your actual API key
     try:
         result = generate_collective_summary_and_questions(pdf_paths, api_key_summary)
         st.session_state["summaries"] = result["summary"]
