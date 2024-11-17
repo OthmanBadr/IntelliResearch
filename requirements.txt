@@ -10,3 +10,4 @@ pypdf
 pymupdf
 tiktoken
 sentence_transformers
+fitz
