@@ -11,3 +11,4 @@ pymupdf
 tiktoken
 sentence_transformers
 fitz
+frontend
