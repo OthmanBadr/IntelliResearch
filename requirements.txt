@@ -8,5 +8,7 @@ google-cloud
 faiss-cpu
 pypdf
 pymupdf
+pytesseract
 tiktoken
 sentence_transformers
+pytesseract
