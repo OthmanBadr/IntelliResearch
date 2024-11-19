@@ -3,19 +3,35 @@ openai==0.27.0  # Or the appropriate version of the API for genai
 requests==2.28.2
 PyPDF2==1.26.0  # To handle PDF files if necessary
 mimetypes==0.9.0
-
+streamlit 
+matplotlib.pyplot 
+os
+fitz
+time
 torch
+getpass
 requests
+mimetypes
 pytesseract
-numpy
-pandas
-Pillow
-langchain
-PyPDF2
-pdf2image
-sentence_transformers
-transformers
-huggingface_hub
+numpy as np
+pandas as pd
+PIL 
+langchain 
+PyPDF2 
+collections  deque
+matplotlib.pyplot 
+huggingface_hub 
 semantic_router
-google-generativeai
-
+google.generativeai 
+langchain.schema 
+pdf2image 
+semantic_router 
+vertexai 
+langchain.prompts 
+semantic_router 
+sentence_transformers 
+langchain_google_genai 
+langchain_huggingface 
+langchain 
+langchain_core 
+transformers 
