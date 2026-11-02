@@ -1,0 +1,238 @@
+{
+  "dataset": "Original synthetic smoke-test material, not published research or a benchmark.",
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "k": 3,
+  "mean_recall_at_k": 1.0,
+  "retrieval_p50_seconds": 0.017040825999970366,
+  "live_generation": false,
+  "cases": [
+    {
+      "id": "battery-accuracy",
+      "retrieved_pages": [
+        [
+          "battery",
+          1
+        ],
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          1
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.01665834999994331
+    },
+    {
+      "id": "battery-inputs",
+      "retrieved_pages": [
+        [
+          "battery",
+          1
+        ],
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          1
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.014702844999874287
+    },
+    {
+      "id": "battery-split",
+      "retrieved_pages": [
+        [
+          "battery",
+          1
+        ],
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.01376156100013759
+    },
+    {
+      "id": "camera-latency",
+      "retrieved_pages": [
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          1
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.026584372999877814
+    },
+    {
+      "id": "camera-data",
+      "retrieved_pages": [
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          1
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.016735444000005373
+    },
+    {
+      "id": "camera-weather",
+      "retrieved_pages": [
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          1
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.01877374100013185
+    },
+    {
+      "id": "arabic-labels",
+      "retrieved_pages": [
+        [
+          "arabic",
+          1
+        ],
+        [
+          "arabic",
+          2
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.025973502999931952
+    },
+    {
+      "id": "arabic-accuracy",
+      "retrieved_pages": [
+        [
+          "arabic",
+          1
+        ],
+        [
+          "arabic",
+          2
+        ],
+        [
+          "battery",
+          1
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.041217335000055755
+    },
+    {
+      "id": "arabic-limitations",
+      "retrieved_pages": [
+        [
+          "arabic",
+          1
+        ],
+        [
+          "arabic",
+          2
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.018324815999903876
+    },
+    {
+      "id": "cross-language",
+      "retrieved_pages": [
+        [
+          "arabic",
+          1
+        ],
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "retrieval_seconds": 0.01734620799993536
+    },
+    {
+      "id": "missing-cost",
+      "retrieved_pages": [
+        [
+          "battery",
+          1
+        ],
+        [
+          "battery",
+          2
+        ],
+        [
+          "camera",
+          1
+        ]
+      ],
+      "recall_at_k": null,
+      "retrieval_seconds": 0.016510782000068502
+    },
+    {
+      "id": "missing-author",
+      "retrieved_pages": [
+        [
+          "arabic",
+          1
+        ],
+        [
+          "arabic",
+          2
+        ],
+        [
+          "camera",
+          2
+        ]
+      ],
+      "recall_at_k": null,
+      "retrieval_seconds": 0.016465563999872757
+    }
+  ]
+}

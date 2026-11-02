@@ -1,0 +1,25 @@
+{
+  "description": "Original synthetic smoke-test material, not published research or a benchmark.",
+  "pages": [
+    {"document_id": "battery", "filename": "battery-study.pdf", "number": 1, "text": "A battery fault classifier was evaluated on 100 held-out samples. Model A accuracy is 92 percent. Model B accuracy is 85 percent. No on-road vehicle evaluation was conducted."},
+    {"document_id": "battery", "filename": "battery-study.pdf", "number": 2, "text": "The battery classifier used voltage and temperature measurements as input features. Training and test data were separated by vehicle. A limitation is the small number of vehicles in the dataset."},
+    {"document_id": "camera", "filename": "camera-study.pdf", "number": 1, "text": "A camera object detector was evaluated at night. Its median inference latency was 40 milliseconds on a CPU. The study did not report performance on a GPU. Rain reduced detection accuracy."},
+    {"document_id": "camera", "filename": "camera-study.pdf", "number": 2, "text": "Camera experiments used 200 annotated frames collected at night. Daytime images were excluded. The authors recommend collecting more rainy-night images before deployment."},
+    {"document_id": "arabic", "filename": "arabic-study.pdf", "number": 1, "text": "تتناول الدراسة تصنيف الأخبار العربية إلى ثلاث فئات: الرياضة والاقتصاد والسياسة. استُخدمت مجموعة اختبار تضم 300 خبر. بلغت دقة النموذج 90 بالمئة. لم تختبر الدراسة النصوص باللهجات المحلية."},
+    {"document_id": "arabic", "filename": "arabic-study.pdf", "number": 2, "text": "اعتمد نموذج تصنيف الأخبار على تمثيلات متعددة اللغات. من قيود البحث صغر حجم البيانات وعدم تنوع مصادر الأخبار. يقترح الباحثون توسيع مجموعة البيانات لتشمل اللهجات المحلية."}
+  ],
+  "questions": [
+    {"id": "battery-accuracy", "question": "What accuracy did Model A achieve in the battery study?", "expected_pages": [["battery", 1]], "answer_contains": ["92"]},
+    {"id": "battery-inputs", "question": "What input features did the battery classifier use?", "expected_pages": [["battery", 2]], "answer_contains": ["voltage", "temperature"]},
+    {"id": "battery-split", "question": "How were battery training and test data separated?", "expected_pages": [["battery", 2]], "answer_contains": ["vehicle"]},
+    {"id": "camera-latency", "question": "What was the camera detector's CPU inference latency?", "expected_pages": [["camera", 1]], "answer_contains": ["40"]},
+    {"id": "camera-data", "question": "How many frames were used in the nighttime camera experiments?", "expected_pages": [["camera", 2]], "answer_contains": ["200"]},
+    {"id": "camera-weather", "question": "How did rain affect camera detection accuracy?", "expected_pages": [["camera", 1]], "answer_contains": ["rain"]},
+    {"id": "arabic-labels", "question": "ما فئات الأخبار في الدراسة العربية؟", "expected_pages": [["arabic", 1]], "answer_contains": ["الرياضة", "الاقتصاد", "السياسة"]},
+    {"id": "arabic-accuracy", "question": "كم بلغت دقة نموذج تصنيف الأخبار العربية؟", "expected_pages": [["arabic", 1]], "answer_contains": ["90"]},
+    {"id": "arabic-limitations", "question": "ما قيود البحث المتعلقة ببيانات الأخبار؟", "expected_pages": [["arabic", 2]], "answer_contains": ["البيانات"]},
+    {"id": "cross-language", "question": "How many test news items were used in the Arabic classification study?", "expected_pages": [["arabic", 1]], "answer_contains": ["300"]},
+    {"id": "missing-cost", "question": "What was the total dollar cost of training the battery classifier?", "expected_pages": [], "answer_contains": []},
+    {"id": "missing-author", "question": "ما اسم مؤلف دراسة تصنيف الأخبار؟", "expected_pages": [], "answer_contains": []}
+  ]
+}
